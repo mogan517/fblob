@@ -1,5 +1,4 @@
 # Byte-compiled / optimized / DLL files
-run.py
 __pycache__/
 *.py[cod]
 *$py.class
@@ -126,6 +125,10 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
+*run.py*
+*run.py
+run.py
+.run.py
+run.py*
 # Pyre type checker
 .pyre/
