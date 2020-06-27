@@ -1,0 +1,85 @@
+{% extends "layout.html" %} {% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ 
+  url_for('static', filename="css/detail.css")
+}}" /> {% endblock %} {% block content %}
+
+<div class="menu-wrap">
+	<div class="logo">logo</div>
+	<input type="checkbox" class="toggler" />
+	<div class="hamburger"><div></div></div>
+	<div class="menu">
+		<div>
+			<div>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">关于本站</a></li>
+					<li><a href="#">Top 10 </a></li>
+					<li><a href="#">加入</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<header>
+	<a href="" target="_blank"
+		><img src="../static/images/rock_03.png" alt="Logo"
+	/></a>
+
+	<ul class="mmenu">
+		<li class="active">
+			<span>日常tips</span>
+			<span class="caret"></span>
+			<ul class="dropdown">
+				<li><a href="" target="_blank">亲子互动</a></li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>困扰</span>
+			<span class="caret"></span>
+			<ul class="dropdown">
+				<li>求助方式</li>
+				<li><a href="" target="_blank">给s4予帮助</a></li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>语言训练</span>
+			<ul class="dropdown">
+				<li>1baby cards</li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>问答</span>
+			<ul class="dropdown">
+				<li>1baby cards</li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+	</ul>
+</header>
+
+<div class="container">
+	{% for u in ddd %}
+	<div id="leftcontent" class="c-left">
+		<ol class="breadcrumb">
+			<li><a href="">首页</a></li>
+			<li>
+				{% block title %}
+					
+				{% endblock %}
+			</li>
+		</ol>
+	     <div id="leftcontent">
+						
+		 </div>
+	</div>
+	<div id="rightcontent" class="c-right"></div>
+	{% endfor %}
+</div>
+{% endblock %}

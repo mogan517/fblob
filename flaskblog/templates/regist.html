@@ -1,0 +1,67 @@
+{% extends 'layout.html' %} {% block head %}
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+{% endblock %} {% block content %}
+
+<form action="" method="POST">
+	<label>
+		name:
+		<input type="text" name="name" />
+	</label>
+	<label>
+		email:
+		<input type="email" name="email" />
+	</label>
+	<label
+		>留言me:
+		<textarea id="mck" name="msg"></textarea>
+	</label>
+	ok
+	<input type="submit" />
+</form>
+<style type="text/css" media="screen">
+	label {
+		width: 80vw;
+		display: flex;
+		flex-direction: column;
+	}
+	input {
+		font-size: 1rem;
+	}
+	input:focus {
+		font-size: 1rem;
+	}
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		select,
+		textarea,
+		input {
+			font-size: 1rem;
+		}
+	}
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		select:focus,
+		textarea:focus,
+		input:focus {
+			font-size: 1rem;
+		}
+	}
+	form {
+		border: 1px solid #555;
+		padding: 20px;
+	}
+	input:valid {
+		border: 2px solid lightblue;
+	}
+	input:invalid {
+		border: 2px solid lightcoral;
+	}
+</style>
+
+    <script src="{{ url_for('static', filename="js/ckeditor.js")}}"></script>
+      <script>
+        ClassicEditor
+            .create( document.querySelector( '#mck' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+{% endblock %}

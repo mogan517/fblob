@@ -1,0 +1,99 @@
+{% extends "layout.html" %} {% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ 
+  url_for('static', filename="css/article.css")
+
+
+}}" /> {% endblock %} {% block content %}
+<div class="menu-wrap">
+	<div class="logo">logo</div>
+	<input type="checkbox" class="toggler" />
+	<div class="hamburger"><div></div></div>
+	<div class="menu">
+		<div>
+			<div>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">关于本站</a></li>
+					<li><a href="#">Top 10 most wished Books</a></li>
+					<li><a href="#">加入</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<header>
+	<a href="" target="_blank"
+		><img src="../static/images/rock_03.png" alt="Logo"
+	/></a>
+
+	<ul class="mmenu">
+		<li class="active">
+			<span>日常tips</span>
+			<span class="caret"></span>
+			<ul class="dropdown">
+				<li><a href="" target="_blank">亲子互动</a></li>
+				<li>故事书</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>童话</span>
+			<span class="caret"></span>
+			<ul class="dropdown">
+				<li>求助方式</li>
+				<li><a href="" target="_blank">给s4予帮助</a></li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>语言训练</span>
+			<ul class="dropdown">
+				<li>1baby cards</li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>问答</span>
+			<ul class="dropdown">
+				<li>1baby cards</li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+	</ul>
+</header>
+
+<div class="container">
+	<div class="c-left">
+		<ol class="breadcrumb">
+			<li><a href="">首页</a></li>
+			<li>Baby Sign Language Chart</li>
+		</ol>
+	{% if aid %}
+	{% for u in article %}
+		<h1>{{ u[1] }}</h1>
+        {{ u[2]|safe }}
+	{% endfor %}
+	{% else %}
+		<ul>
+		{% for li in allarticle  %}
+			<li class="list-box">
+				<h3 class="texth1">
+					{{li[1]}}
+				</h3>
+				<p class="snaps">
+					{{li[4]|safe}}
+					<a href="{{url_for('article',aid=li[0])}}"class="detallink">【详情】</a>
+				</p>
+			</li> 	
+		{% endfor %}
+		</ul>
+	{% endif %}
+				<p><button class="more">查看更多</button></p>
+	</div>
+	<div class="c-right"></div>
+	
+</div>
+{% endblock %}

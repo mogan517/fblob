@@ -1,0 +1,9 @@
+{% extends 'layout.html' %} {% block content %}
+{% for user in userDetails %}
+    {# {% if loop.index >= 24 %} #}
+    <h4> {{ user[0] }}</h4>
+    
+		{{ user[2]|safe }}
+    {# {% endif %} #}
+	{% endfor %}
+{% endblock %} {% block footer %} {% endblock %}
