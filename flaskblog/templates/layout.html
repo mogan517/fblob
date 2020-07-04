@@ -8,27 +8,28 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- <link rel="stylesheet" href="/blog/static/bootstrap.min.css" integrity="sha384&#45;Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}"> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-    <!-- <link rel="stylesheet" type="text/css" href="/blog/static/main.css"> -->
 
     {% if title %}
-        <title>Flask Blog - {{ title }}</title>
+        <title>Rocky Dreamtime Blog - {{ title }}</title>
     {% else %}
-        <title>Flask Blog</title>
+        <title>Rockey Dreamtime Blog</title>
     {% endif %}
 </head>
 <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="/">宝妈心得</a>
+          <a class="navbar-brand mr-4" href="/"><img height="60"  src="/blog/static/rocklogo.svg" alt="Rockydreamtime"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{{ url_for('main.home') }}">主页</a>
-              <a class="nav-item nav-link" href="{{ url_for('main.about') }}">关于us</a>
+              <a class="nav-item nav-link" href="{{ url_for('main.abouts') }}">关于uss</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
@@ -68,6 +69,7 @@
                 <li class="list-group-item list-group-item-light">公告内容</li>
                 <li class="list-group-item list-group-item-light">日历</li>
                 <li class="list-group-item list-group-item-light">计划</li>
+                <li class="list-group-item list-group-item-light"><a href="/">入站</a></li>
               </ul>
             </p>
           </div>

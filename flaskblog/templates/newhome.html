@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<link rel="stylesheet" href="../static/css/styleA.css" media="all" />
+		<header>
+			<nav>
+				<img
+					id="logo"
+					src="../static/images/rocklogo.svg"
+					width="180"
+					height="90"
+					alt="logoimage"
+				/>
+				<img
+					class="hamburger"
+					src="../static/images/iconfinder_menu-alt_134216.svg"
+					alt="hamburger"
+				/>
+			</nav>
+
+			<section class="navlink">
+				<a href="/blog">news home</a>
+				<a href="#">about</a>
+				<a href="#">shop</a>
+				<a href="#">health</a>
+				<a href="#">books</a>
+			</section>
+			<section class="anim_sec">
+				<div class="hero">
+					<img src="../static/images/backgroundimg.jpg" alt="" />
+					<h1 class="headline">宝妈心得</h1>
+				</div>
+			</section>
+		</header>
+		<div class="slider"></div>
+
+		<div class="why">
+			<h1 class="why_headline">为什么要用RockyDreamtime?</h1>
+			<p class="answer_info">
+				我们拥有1000多用户，两手多工厂，4台跑车，500头牛
+			</p>
+		</div>
+		<div class="panel_postopen">
+			<div class="panel_left">
+				<h3 class="gallery_headline">dd加入了本期热售</h3>
+				<div class="photo_gallery">
+					<div class="gallery_img">
+						<img src="../static/images/gallery.jpg" alt="" />
+						<div class="sub_img">
+							<a href="#">
+								<img
+									src="../static/images/hbz-10-experts-dream-vacations-8-gettyimages-569665535.jpg"
+									alt=""
+								/>
+								what are u doing?
+							</a>
+							<a href="#">
+								<img
+									src="../static/images/hbz-10-experts-dream-vacations-8-gettyimages-569665535.jpg"
+									alt=""
+								/>
+								what are u doing?
+							</a>
+							<a href="#">
+								<img
+									src="../static/images/hbz-10-experts-dream-vacations-8-gettyimages-569665535.jpg"
+									alt=""
+								/>
+								what are u doing?
+							</a>
+							<!-- <a href="#"> -->
+							<!-- 	<img src="hbz&#45;10&#45;experts&#45;dream&#45;vacations&#45;8&#45;gettyimages&#45;569665535.jpg" alt=""> -->
+							<!-- what are u doing? 	</a> -->
+						</div>
+					</div>
+					<div class="gallery_pos_info">
+						<h3 class="gallery_img_headline">dd加入了本期热售</h3>
+						<p class="gallery_desc">tops news</p>
+						<p class="gallery_desc">tops news</p>
+						<p class="gallery_desc">tops news</p>
+						<p class="gallery_desc">tops news</p>
+						<p class="gallery_desc">join the artticle to post your stores.</p>
+					</div>
+				</div>
+				<div class="hot_topics">
+					{% for u in list%}
+					<h1>{{ u }}</h1>
+					{{ u[2] | safe }}
+					{% endfor %}
+					<ul></ul>
+					<p><button class="more">查看更多</button></p>
+				</div>
+			</div>
+			<div class="panel_right">
+				<div>
+					<img
+						src="../static/images/header-3@2x.png"
+						class="right_advert"
+						alt=""
+					/>
+				</div>
+				<h4 class="right_advert_headline">it' good very cool!</h4>
+				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>
+				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>
+				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>
+				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>
+				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>
+			</div>
+		</div>
+
+		<script src="../static/js/TweenMax.min.js"></script>
+
+		<script src="../static/js/TimelineMax.min.js"></script>
+		<script src="../static/js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,336 @@
+
+		 .c-left ul {
+			 margin: 0rem;
+			 padding-left:0;
+		 }
+		 li.list-box {
+			padding:2rem;
+			background: #f2f7f7;
+			margin-bottom: 1rem;
+		 }
+		 .texth1 {
+			 font-size: 1.5rem;
+			 color:blue;
+			 margin:0;
+		 }
+		 a.detallink {
+			 text-decoration: none;
+			 color:red
+		 }
+		 .texth1 ~ p.snaps{
+			 margin:0;
+			 text-indent:2rem;
+			 color: #666;
+			 font-size: 1.4rem;
+		 }
+		 .c-left > p {
+			 text-align: center
+		 }
+			.container,
+			header {
+				width: 80vw;
+				margin: 0 auto;
+				flex-direction: row;
+				display: flex;
+			}
+
+			.c-left {
+				flex: 4;
+			}
+
+			.c-right {
+				flex: 1;
+			}
+
+			header {
+				border-bottom: 1px solid darkgray;
+			}
+
+			header > a {
+				align-self: center;
+				flex: 2;
+			}
+
+			header > a:only-child img {
+				height: 26.55px;
+				width: 220px;
+			}
+
+			header > ul {
+				flex: 5;
+			}
+
+			.mmenu {
+				display: inline-flex;
+				color: green;
+			}
+
+			.mmenu > li {
+				padding: 0.5rem 1rem;
+				margin-right: 2rem;
+				position: relative;
+			}
+
+			ul,
+			li {
+				list-style: none;
+			}
+
+			.dropdown {
+				display: none;
+				text-align: center;
+				padding: 10px;
+			}
+
+			.dropdown li {
+				border-bottom: 1px solid white;
+				color: white;
+				width: 8rem;
+				margin: 1rem;
+			}
+
+			.dropdown li:hover {
+				background: white;
+				color: green;
+			}
+
+			.caret {
+				display: inline-block;
+				width: 0;
+				height: 0;
+				margin-left: 2px;
+				vertical-align: middle;
+				border-top: 4px solid white;
+				border-right: 4px solid transparent;
+				border-left: 4px solid transparent;
+				border-bottom: 0 dotted;
+			}
+
+			.mmenu .active,
+			.mmenu li:hover {
+				text-decoration: none;
+				color: white;
+				background-color: green;
+			}
+
+			.mmenu li:hover .dropdown {
+				position: absolute;
+				margin-top: 7px;
+				margin-left: -16px;
+				height: 8rem;
+				background: #ccc;
+				display: block;
+			}
+			.mmenu li a {
+				text-decoration: none;
+				color: white !important;
+			}
+
+			.mmenu li:hover .dropdown ul {
+				padding: none;
+				margin: none;
+				height: 9rem;
+				display: block;
+			}
+
+			.breadcrumb {
+				padding: 8px 15px;
+				margin-bottom: 27px;
+				list-style: none;
+				background-color: #f5f5f5;
+				border-radius: 4px;
+			}
+
+			.breadcrumb > li + li:before {
+				content: "/\00a0";
+				padding: 0 5px;
+				color: #ccc;
+			}
+
+			.breadcrumb a {
+				color: #9abe00;
+			}
+
+			.breadcrumb li {
+				display: inline-block;
+				color: #ccc;
+			}
+
+			h1 {
+				font-size: 3rem;
+			}
+			.menu-wrap {
+				display: none;
+			     position:fixed;
+			}
+			@media only screen and (max-width: 768px) {
+				.c-right {
+					display: none;
+				}
+				.c-left {
+					flex: 1;
+				}
+
+
+				.menu-wrap {
+					display: block;
+                    position:fixed;
+                 width: 100%;
+                 background:white;
+    height: 4rem;
+				top: 0;
+				left: 0;
+				}
+				header {
+					display: none;
+				}
+			     .container {
+			       margin-top:4rem;
+			            width:96vw;
+			     }
+			}
+			/* MENU STYLES */
+			.menu-wrap {
+			     margin:0;
+				z-index: 1;
+			}
+
+			.menu-wrap .toggler {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				cursor: pointer;
+				width: 50px;
+				height: 50px;
+				opacity: 0;
+			}
+
+			.menu-wrap .hamburger {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				width: 2rem;
+				height: 2rem;
+				padding: 1rem;
+				background:rgba(0,9,9,.4) ;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* Hamburger Line */
+			.menu-wrap .hamburger > div {
+				position: relative;
+				flex: none;
+				width: 100%;
+				height: 2px;
+				background: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all 0.4s ease;
+			}
+
+			/* Hamburger Lines - Top & Bottom */
+			.menu-wrap .hamburger > div::before,
+			.menu-wrap .hamburger > div::after {
+				content: "";
+				position: absolute;
+				z-index: 1;
+				top: -10px;
+				width: 100%;
+				height: 2px;
+				background: inherit;
+			}
+
+			/* Moves Line Down */
+			.menu-wrap .hamburger > div::after {
+				top: 10px;
+			}
+
+			/* Toggler Animation */
+			.menu-wrap .toggler:checked + .hamburger > div {
+				transform: rotate(135deg);
+			}
+
+			/* Turns Lines Into X */
+			.menu-wrap .toggler:checked + .hamburger > div:before,
+			.menu-wrap .toggler:checked + .hamburger > div:after {
+				top: 0;
+				transform: rotate(90deg);
+			}
+
+			/* Rotate On Hover When Checked */
+			.menu-wrap .toggler:checked:hover + .hamburger > div {
+				transform: rotate(225deg);
+			}
+
+			/* Show Menu */
+			.menu-wrap .toggler:checked ~ .menu {
+				visibility: visible;
+			         background: rgba(15,49,88,.7);
+			}
+
+			.menu-wrap .toggler:checked ~ .menu > div {
+				transform: scale(1);
+				transition-duration: var(--menu-speed);
+			}
+
+			.menu-wrap .toggler:checked ~ .menu > div > div {
+				opacity: 1;
+				transition: opacity 0.4s ease 0.4s;
+			}
+
+			.menu-wrap .menu {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				visibility: hidden;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.menu-wrap .menu > div {
+				background: var(--overlay-color);
+				border-radius: 50%;
+				width: 200vw;
+				height: 200vw;
+				display: flex;
+				flex: none;
+				align-items: center;
+				justify-content: center;
+				transform: scale(0);
+				transition: all 0.4s ease;
+			}
+
+			.menu-wrap .menu > div > div {
+				text-align: center;
+				max-width: 90vw;
+				max-height: 100vh;
+				opacity: 0;
+				transition: opacity 0.4s ease;
+			}
+
+			.menu-wrap .menu > div > div > ul > li {
+				list-style: none;
+			       color: white;
+			 padding: 3rem;
+			 background: rgba(22,22,22,.4);
+			}
+
+			.menu-wrap .menu > div > div > ul > li > a {
+				color: inherit;
+				text-decoration: none;
+				transition: color 0.4s ease;
+			}
+			   .logo{
+			     position:fixed;
+			       top:1rem ;left:8rem;
+			            color:green;
+         }

@@ -1,7 +1,10 @@
 from flask import Blueprint, render_template
 
 errors = Blueprint('errors', __name__)
-
+# errors = Blueprint('errory', __name__, url_prefix='/errory')
+# @errors.route('/')
+# def index():
+#   return render_template('errors/404.html')
 
 @errors.app_errorhandler(404)
 def error_404(error):

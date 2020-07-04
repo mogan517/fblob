@@ -1,9 +1,11 @@
-{% extends 'layout.html' %} {% block content %}
+
+{% for user in userDetails %}
+
+    <a href="#findme{{user[3]}}" target="_self">  {{ user[0] }}</a>
+	{% endfor %}
 {% for user in userDetails %}
     {# {% if loop.index >= 24 %} #}
-    <h4> {{ user[0] }}</h4>
-    
+    <h4 id="findme{{user[3]}}"> {{ user[0] }}</h4>
 		{{ user[2]|safe }}
     {# {% endif %} #}
 	{% endfor %}
-{% endblock %} {% block footer %} {% endblock %}

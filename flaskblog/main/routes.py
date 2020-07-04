@@ -1,20 +1,35 @@
 from flask import render_template, request, Blueprint
-from flaskblog.models import Post
-
+from flaskblog.models import Post,Sitelist
 main = Blueprint('main', __name__)
-
+from flaskblog import mysql # Import from app here
 
 @main.route("/")
-@main.route("/home")
+def newhome():
+    print("sitehome")
+    list = Sitelist.query.all()
+    return render_template('newhome.html',list=list)
+@main.route('/usersa')
+def userss():
+    cur = mysql.connection.cursor()
+    resultValue = cur.execute("SELECT * FROM users")
+    if resultValue > 0:
+        userDetails = cur.fetchall()
+        return render_template('users.html',userDetails=userDetails)
+@main.route("/blog/home")
 def home():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
     return render_template('home.html', posts=posts)
 
 
+@main.route("/blog/about")
+def abouts():
+    print(777777777771)
+    return render_template('about.html', title='About')
 @main.route("/about")
 def about():
-    return render_template('about.html', title='About')
+    print(777777777778)
+    return render_template('index.html', title='About')
 
 @main.route('/article/<int:aid>')
 def article(aid):
@@ -28,7 +43,7 @@ def articlelist():
     # resultValue1 = cur.execute('SELECT * FROM Articles')
     # allarticle = cur.fetchall()
     return render_template('article.html')
-@main.route('/users')
+@main.route('/blog/users')
 def users():
     cur = mysql.connection.cursor()
     resultValue = cur.execute("SELECT * FROM users")
@@ -54,7 +69,7 @@ def postarticle():
         cur.close()
     return render_template('postarticle.html')
 
-@main.route("/registration",methods=['GET','POST'])
+@main.route("/blog/registration",methods=['GET','POST'])
 def registration():
     if request.method == "POST":
         userDetails  = request.form
@@ -69,6 +84,6 @@ def registration():
         cur.execute(insert_stmt, [name,email,msg])
         mysql.connection.commit()
         cur.close()
-        return redirect('/users')
+        return redirect('/blog/users')
     return render_template('regist.html')
 
