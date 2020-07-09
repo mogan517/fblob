@@ -24,30 +24,46 @@
 			</nav>
 
 			<section class="navlink">
-				<a href="/blog">news home</a>
-				<a href="#">about</a>
-				<a href="#">shop</a>
-				<a href="#">health</a>
-				<a href="#">books</a>
+				<a href="/blog">保养A-Z</a>
+				<a href="#">营养&维生素</a>
+				<a href="#">健康&长寿</a>
+				<a href="#">家庭&孕妈</a>
+				<a href="#">新闻&专家</a>
 			</section>
 			<section class="anim_sec">
 				<div class="hero">
 					<img src="../static/images/backgroundimg.jpg" alt="" />
-					<h1 class="headline">宝妈心得</h1>
+					<div class="headline">
+					<input value="Search" type="text" />
+					<input type="button" value="搜索">
+					</div>
 				</div>
 			</section>
 		</header>
 		<div class="slider"></div>
 
 		<div class="why">
-			<h1 class="why_headline">为什么要用RockyDreamtime?</h1>
-			<p class="answer_info">
-				我们拥有1000多用户，两手多工厂，4台跑车，500头牛
-			</p>
+			<h1 class="why_headline">热议话题</h1>
+			<div class="answer_info">
+
+
+				<a href="">
+				<button>口罩</button>
+				</a>
+				<a href="">
+				<button>免洗洗手液</button>
+				</a>
+				<a href="">
+				<button>发财项目</button>
+				</a>
+				<a href="">
+				<button>失眠</button>
+				</a>
+			</div>
 		</div>
 		<div class="panel_postopen">
 			<div class="panel_left">
-				<h3 class="gallery_headline">dd加入了本期热售</h3>
+				<h3 class="gallery_headline">本站videos</h3>
 				<div class="photo_gallery">
 					<div class="gallery_img">
 						<img src="../static/images/gallery.jpg" alt="" />
@@ -57,21 +73,21 @@
 									src="../static/images/hbz-10-experts-dream-vacations-8-gettyimages-569665535.jpg"
 									alt=""
 								/>
-								what are u doing?
+								防晒霜的种类
 							</a>
 							<a href="#">
 								<img
 									src="../static/images/hbz-10-experts-dream-vacations-8-gettyimages-569665535.jpg"
 									alt=""
 								/>
-								what are u doing?
+								5个过敏体的因素
 							</a>
 							<a href="#">
 								<img
-									src="../static/images/hbz-10-experts-dream-vacations-8-gettyimages-569665535.jpg"
+									src="../static/images/backgroundimg.jpg"
 									alt=""
 								/>
-								what are u doing?
+								饮食营养预防Virus
 							</a>
 							<!-- <a href="#"> -->
 							<!-- 	<img src="hbz&#45;10&#45;experts&#45;dream&#45;vacations&#45;8&#45;gettyimages&#45;569665535.jpg" alt=""> -->
@@ -79,22 +95,45 @@
 						</div>
 					</div>
 					<div class="gallery_pos_info">
-						<h3 class="gallery_img_headline">dd加入了本期热售</h3>
-						<p class="gallery_desc">tops news</p>
-						<p class="gallery_desc">tops news</p>
-						<p class="gallery_desc">tops news</p>
-						<p class="gallery_desc">tops news</p>
-						<p class="gallery_desc">join the artticle to post your stores.</p>
+						<h3 class="gallery_img_headline">连降大雨，多地受灾</h3>
+						<div class="gallery_desc">
+							<p> 地下车库情况糟糕</p>
+							<p>救援组救援任务快速展开 </p>
+						</div>
 					</div>
 				</div>
-				<div class="hot_topics">
+				<!-- <h2>y</h2> -->
+				<h3 class="gallery_headline">保持健康</h3>
+				<ul class="hot_topics">
 					{% for u in list%}
-					<h1>{{ u }}</h1>
-					{{ u[2] | safe }}
-					{% endfor %}
-					<ul></ul>
+					<li>
+						<a href="">
+						<img width="100" height="100" src="../static/images/{{u.category}}" alt="">
+						<div class="li-content">
+						<p>
+						{{ u.subtitle | safe }}
+						</p>
+						<h3>{{ u.title }}</h3>
+						</div>
+						</a>
+						<div class="cr"></div>
+					</li>
+						{% endfor %}
+				</ul>
 					<p><button class="more">查看更多</button></p>
-				</div>
+						<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<h1>s2sdfsdf</h1>
+
 			</div>
 			<div class="panel_right">
 				<div>
@@ -104,7 +143,7 @@
 						alt=""
 					/>
 				</div>
-				<h4 class="right_advert_headline">it' good very cool!</h4>
+				<h4 class="right_advert_headline">it' good very cool?</h4>
 				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>
 				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>
 				<p class="right_advert_content">1000 id ,300 city buy 1 9 free</p>

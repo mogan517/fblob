@@ -43,6 +43,13 @@ class Sitelist(db.Model):
     desc = db.Column(db.String(400), nullable=True)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=True)
+    def __init__(self, title, content, subtitle, likecount):
+        self.title = title
+        self.subtitle = subtitle
+        self.likecount = likecount
+        self.content = content
+    def __repr__(self):
+        return '<Sitelist %r>' % self.title
     # user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     # def __repr__(self):

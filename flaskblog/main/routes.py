@@ -7,7 +7,19 @@ from flaskblog import mysql # Import from app here
 def newhome():
     print("sitehome")
     list = Sitelist.query.all()
+    # list = Sitelist.query.filter_by(id=2).first()
+    # for r in list:
+    #     print(r)
+    print(65)
     return render_template('newhome.html',list=list)
+
+@main.route("/bitch")
+def getArticle():
+    list = Sitelist.query.all()
+    # list = Sitelist.query.filter_by(id=title).first()
+    print(list)
+    # return f' oko is : {list.title}'
+    return render_template('index.html', list=list)
 @main.route('/usersa')
 def userss():
     cur = mysql.connection.cursor()

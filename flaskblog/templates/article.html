@@ -1,10 +1,12 @@
-{% extends "layout.html" %} {% block head %}
-{{ super() }}
+{# {% extends "layout.html" %} #}
+{# {% block head %} #}
+{# {{ super() }} #}
 <link rel="stylesheet" href="{{ 
   url_for('static', filename="css/article.css")
 
 
-}}" /> {% endblock %} {% block content %}
+}}" /> 
+{# {% endblock %} {% block content %} #}
 <div class="menu-wrap">
 	<div class="logo">logo</div>
 	<input type="checkbox" class="toggler" />
@@ -96,4 +98,4 @@
 	<div class="c-right"></div>
 	
 </div>
-{% endblock %}
+{# {% endblock %} #}
