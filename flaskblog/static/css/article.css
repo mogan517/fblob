@@ -109,8 +109,7 @@
 			.mmenu .active,
 			.mmenu li:hover {
 				text-decoration: none;
-				color: white;
-				background-color: green;
+				color: black;
 			}
 
 			.mmenu li:hover .dropdown {

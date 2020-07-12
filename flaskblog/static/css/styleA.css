@@ -1,4 +1,21 @@
 
+		@media only screen and (max-width: 768px) {
+		
+				.menu-wrap {
+					display: block;
+                    position:fixed;
+                 width: 100%;
+                 background:white;
+    height: 4rem;
+				top: 0;
+				left: 0;
+				}
+				header {
+					display: none;
+				}
+			
+			}
+
 		 .c-left ul {
 			 margin: 0rem;
 			 padding-left:0;
@@ -320,12 +337,6 @@ ul.hot_topics,li {
 	cursor: pointer;
 	background-color: #007cb1;
 	color:white
-}
-
-@media only screen and (max-width: 768px) { 
-.panel_postopen {
-	    grid-template-columns: 1fr;
-}
 }
 
 

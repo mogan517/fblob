@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, current_app
 from flask_mysqldb import MySQL
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
@@ -16,6 +16,8 @@ login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 mail = Mail()
 mysql = MySQL()
+# with current_app.open_resource('static/root.txt') as f:
+    # f.read()
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config["MYSQL_HOST"] = '47.101.59.109'

@@ -20,6 +20,10 @@ def getArticle():
     print(list)
     # return f' oko is : {list.title}'
     return render_template('index.html', list=list)
+@main.route("/root.txt")
+def roott():
+    f = open('../static/main.css')
+    return "sdfsf"
 @main.route('/usersa')
 def userss():
     cur = mysql.connection.cursor()
