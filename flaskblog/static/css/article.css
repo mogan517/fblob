@@ -162,7 +162,7 @@
 				display: none;
 			     position:fixed;
 			}
-			@media only screen and (max-width: 768px) {
+			@media only screen and (max-width: 788px) {
 				.c-right {
 					display: none;
 				}
