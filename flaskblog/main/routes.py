@@ -5,13 +5,12 @@ from flaskblog import mysql # Import from app here
 
 @main.route("/")
 def newhome():
-    print("sitehome")
     list = Sitelist.query.all()
     # list = Sitelist.query.filter_by(id=2).first()
     # for r in list:
     #     print(r)
-    print(65)
     return render_template('newhome.html',list=list)
+
 
 @main.route("/bitch")
 def getArticle():

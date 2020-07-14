@@ -2,30 +2,42 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 		<title></title>
 	</head>
 
 	<body>
 		<link rel="stylesheet" href="../static/css/styleA.css" media="all" />
-		<link rel="stylesheet" href="../static/css/article.css" media="all" />
+		<!-- <link rel="stylesheet" href="../static/css/article.css" media="all" /> -->
 		<div class="menu-wrap">
-	<div class="logo">logo</div>
-	<input type="checkbox" class="toggler" />
-	<div class="hamburger"><div></div></div>
-	<div class="menu">
-		<div>
-			<div>
-				<ul>
-					<li><a href="#">首页</a></li>
-					<li><a href="#">关于本站</a></li>
-					<li><a href="#">Top 10 most wished Books</a></li>
-					<li><a href="#">加入</a></li>
-				</ul>
+			<div class="logo">
+				<img
+					id="logo"
+					src="../static/images/rocklogo.svg"
+					width="180"
+					height="90"
+					alt="logoimage"
+				/>
+			</div>
+			<input type="checkbox" class="toggler" />
+			<div class="hamburger"><div></div></div>
+			<div class="menu">
+				<div>
+					<div>
+						<ul>
+							<li><a href="#">首页</a></li>
+							<li><a href="#">关于本站</a></li>
+							<li><a href="#">Top 10 most wished Books</a></li>
+							<li><a href="#">加入</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-		</div>
-		<header>
+		<header class="myhead">
 			<nav>
 				<img
 					id="logo"
@@ -52,8 +64,8 @@
 				<div class="hero">
 					<img src="../static/images/backgroundimg.jpg" alt="" />
 					<div class="headline">
-					<input value="Search" type="text" />
-					<input type="button" value="搜索">
+						<input value="Search" type="text" />
+						<input type="button" value="搜索" />
 					</div>
 				</div>
 			</section>
@@ -64,19 +76,17 @@
 		<div class="why">
 			<h1 class="why_headline">热议话题</h1>
 			<div class="answer_info">
-
-
 				<a href="">
-				<button>口罩</button>
+					<button>口罩</button>
 				</a>
 				<a href="">
-				<button>免洗洗手液</button>
+					<button>免洗洗手液</button>
 				</a>
 				<a href="">
-				<button>发财项目</button>
+					<button>发财项目</button>
 				</a>
 				<a href="">
-				<button>失眠</button>
+					<button>失眠</button>
 				</a>
 			</div>
 		</div>
@@ -102,10 +112,7 @@
 								5个过敏体的因素
 							</a>
 							<a href="#">
-								<img
-									src="../static/images/backgroundimg.jpg"
-									alt=""
-								/>
+								<img src="../static/images/backgroundimg.jpg" alt="" />
 								饮食营养预防Virus
 							</a>
 							<!-- <a href="#"> -->
@@ -116,8 +123,8 @@
 					<div class="gallery_pos_info">
 						<h3 class="gallery_img_headline">连降大雨，多地受灾</h3>
 						<div class="gallery_desc">
-							<p> 地下车库情况糟糕</p>
-							<p>救援组救援任务快速展开 </p>
+							<p>地下车库情况糟糕</p>
+							<p>救援组救援任务快速展开</p>
 						</div>
 					</div>
 				</div>
@@ -127,32 +134,36 @@
 					{% for u in list%}
 					<li>
 						<a href="">
-						<img width="100" height="100" src="../static/images/{{u.category}}" alt="">
-						<div class="li-content">
-						<p>
-						{{ u.subtitle | safe }}
-						</p>
-						<h3>{{ u.title }}</h3>
-						</div>
+							<img
+								width="100"
+								height="100"
+								src="../static/images/{{ u.category }}"
+								alt=""
+							/>
+							<div class="li-content">
+								<p>
+									{{ u.subtitle | safe }}
+								</p>
+								<h3>{{ u.title }}</h3>
+							</div>
 						</a>
 						<div class="cr"></div>
 					</li>
-						{% endfor %}
+					{% endfor %}
 				</ul>
-					<p><button class="more">查看更多</button></p>
-						<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		
-		<h1>s2sdfsdf</h1>
+				<p><button class="more">查看更多</button></p>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
 
+				<h1>s2sdfsdf</h1>
 			</div>
 			<div class="panel_right">
 				<div>
