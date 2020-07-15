@@ -3,12 +3,14 @@ from flask import Flask, render_template, request, redirect, jsonify
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
+from flask_ckeditor import CKEditor, CKEditorField  # Step 1
 from flask_admin.contrib.sqla import ModelView
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///flaskblog/site.db'
 app.config['SECRET_KEY'] = 'mysecret'
 app.config['JSON_AS_ASCII'] = False
 db = SQLAlchemy(app)
+ckeditor = CKEditor(app)  # Step 2
 admin  =  Admin(app)
 
 @app.route('/api', methods=['GET'])
@@ -43,9 +45,13 @@ class Post(db.Model):
 
     # def __repr__(self):
     #     return f"Post('{self.title}', '{self.date_posted}')"
+class PostAdmin(ModelView):
+    form_overrides = dict(content=CKEditorField)
+    create_template = 'edit.html'
+    edit_template = 'edit.html'
 
 class Sitelist(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     category = db.Column(db.String(40), nullable=True)
     publisher = db.Column(db.String(80), nullable=True)
@@ -64,7 +70,7 @@ class Postu(db.Model):
     # def __repr__(self):
     #     return f"Post('{self.title}', '{self.date_posted}')"
 admin.add_view(ModelView(Person,db.session))
-admin.add_view(ModelView(Post,db.session))
+admin.add_view(PostAdmin(Post, db.session))
 admin.add_view(ModelView(Postu,db.session))
 admin.add_view(ModelView(Sitelist,db.session))
 

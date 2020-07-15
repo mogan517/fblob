@@ -74,10 +74,10 @@
 			<li>Baby Sign Language Chart</li>
 		</ol>
 	{% if aid %}
-	{% for u in article %}
-		<h1>{{ u[1] }}</h1>
-        {{ u[2]|safe }}
-	{% endfor %}
+	{# {% for u in list %} #}
+		<h1>{{ list.title }}</h1>
+        {{ list.content|safe }}
+	{# {% endfor %} #}
 	{% else %}
 		<ul>
 		{% for li in allarticle  %}

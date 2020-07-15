@@ -1,6 +1,7 @@
 
 
 			.menu-wrap {
+				display: none;
 			     margin:0;
 				z-index: 1;
 			}
@@ -464,6 +465,21 @@ ul.hot_topics,li {
 	color:white
 }
 
+		@media only screen and (max-width: 935px) {
+			.navlink {
+				display: none;
+			}
+			   .hot_topics{
+        min-width:0
+    }
+    .hot_topics li {
+        flex:0 100%;
+    }
+    .panel_postopen {
+            grid-template-columns: 1fr;
+            column-gap: 0rem;
+    }
+		}
 		@media only screen and (max-width: 788px) {
 		
             .myhead{
@@ -492,16 +508,10 @@ ul.hot_topics,li {
     header{
         display:none
     }
-    .hot_topics{
-        min-width:0
-    }
-    .hot_topics li {
-        flex:0 100%;
-    }
-    .panel_postopen {
-            grid-template-columns: 1fr;
-            column-gap: 0rem;
-    }
+	.menu-wrap {
+		display: block;
+	}
+ 
 }
 
 

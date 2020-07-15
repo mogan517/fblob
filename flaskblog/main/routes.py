@@ -48,10 +48,11 @@ def about():
 
 @main.route('/article/<int:aid>')
 def article(aid):
+    list = Sitelist.query.filter_by(id=aid).first()
     cur = mysql.connection.cursor()
     resultValue1 = cur.execute('SELECT * FROM Articles WHERE ArticleId = {0}'.format(aid))
     article = cur.fetchall()
-    return render_template('article.html', article=article, aid=aid)
+    return render_template('article.html', article=article, aid=aid, list=list)
 @main.route('/articlelist')
 def articlelist():
     # cur = mysql.connection.cursor()
