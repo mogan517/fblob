@@ -541,7 +541,7 @@ ul.hot_topics,li {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    header,.gallery_pos_info{
+    header,.gallery_pos_info,.panel_right{
         display:none
     }
 	.menu-wrap {
