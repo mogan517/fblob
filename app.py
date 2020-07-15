@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from datetime import datetime
 import os
 from flask_sqlalchemy import SQLAlchemy
@@ -34,6 +34,10 @@ class Post(db.Model):
     title = db.Column(db.String(120))
     text = db.Column(db.Text)
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 # Flask views
 @app.route('/')

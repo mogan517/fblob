@@ -7,6 +7,7 @@
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
 		<title></title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 	</head>
 
 	<body>
@@ -54,11 +55,55 @@
 			</nav>
 
 			<section class="navlink">
-				<a href="/blog">保养A-Z</a>
-				<a href="#">营养&维生素</a>
-				<a href="#">健康&长寿</a>
-				<a href="#">家庭&孕妈</a>
-				<a href="#">新闻&专家</a>
+				<ul class="mmenu">
+		<li class="active">
+			<span>保养A-Z</span>
+			<span class="caret"></span>
+			<ul class="dropdown">
+				<li><a href="" target="_blank">亲子互动</a></li>
+				<li>故事书</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>营养&维生素</span>
+			<span class="caret"></span>
+			<ul class="dropdown">
+				<li>求助方式</li>
+				<li><a href="" target="_blank">给s4予帮助</a></li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>健康&长寿</span>
+			<ul class="dropdown">
+				<li>1baby cards</li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+		<li>
+			<span>家庭&孕妈</span>
+			<ul class="dropdown">
+				<li>1baby cards</li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+	<li>
+			<span>新闻&专家</span>
+			<ul class="dropdown">
+				<li>1baby cards</li>
+				<li>2baby cards</li>
+				<li>3baby cards</li>
+			</ul>
+		</li>
+	</ul>
+				<!-- <a href="/blog">保养A&#45;Z</a> -->
+				<!-- <a href="#">营养&#38;维生素</a> -->
+				<!-- <a href="#">健康&#38;长寿</a> -->
+				<!-- <a href="#">家庭&#38;孕妈</a> -->
+				<!-- <a href="#">新闻&#38;专家</a> -->
 			</section>
 			<section class="anim_sec">
 				<div class="hero">
