@@ -93,7 +93,7 @@
 	<li>
 			<span>新闻&专家</span>
 			<ul class="dropdown">
-				<li>1baby cards</li>
+				<li>社区</li>
 				<li>2baby cards</li>
 				<li>3baby cards</li>
 			</ul>
@@ -163,10 +163,9 @@
 						</div>
 					</div>
 					<div class="gallery_pos_info">
-						<h3 class="gallery_img_headline">连降大雨，多地受灾</h3>
+						<h4 class="gallery_img_headline">连降大雨，多地受灾</h4>
 						<div class="gallery_desc">
-							<p>地下车库情况糟糕</p>
-							<p>救援组救援任务快速展开</p>
+							<p>地下车库情况糟糕,救援组救援任务快速展开</p>
 						</div>
 					</div>
 				</div>
@@ -186,7 +185,8 @@
 								<p>
 									{{ u.subtitle | safe }}
 								</p>
-								<h3>{{ u.title }}</h3>
+								<h4>{{ u.title }}</h4>
+								<p>{{ u.desc | safe }}</p>
 							</div>
 						</a>
 						<div class="cr"></div>
