@@ -1,14 +1,15 @@
-{# {% extends "layout.html" %} #}
-{# {% block head %} #}
-{# {{ super() }} #}
-<link rel="stylesheet" href="{{ 
-  url_for('static', filename="css/article.css")
-
-
-}}" /> 
-{# {% endblock %} {% block content %} #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/article.css') }}">
+</head>
+<body>
+     
 <div class="menu-wrap">
-	<div class="logo">logo</div>
+	<div class="logo"><img src="../static/images/rocklogo.svg" height="50px" alt=""></div>
 	<input type="checkbox" class="toggler" />
 	<div class="hamburger"><div></div></div>
 	<div class="menu">
@@ -75,7 +76,7 @@
 		</ol>
 	{% if aid %}
 	{# {% for u in list %} #}
-		<h1>{{ list.title }}</h1>
+		<h3>{{ list.title }}</h3>
         {{ list.content|safe }}
 	{# {% endfor %} #}
 	{% else %}
@@ -98,4 +99,5 @@
 	<div class="c-right"></div>
 	
 </div>
-{# {% endblock %} #}
+</body>
+</html>

@@ -37,6 +37,10 @@
 			.c-left {
 				flex: 4;
 			}
+            .c-left img {
+                width:100%;
+                height:auto
+            }
 
 			.c-right {
 				flex: 1;
@@ -197,7 +201,7 @@
 			.menu-wrap .toggler {
 				position: absolute;
 				top: 0;
-				left: 0;
+				right: 0;
 				z-index: 2;
 				cursor: pointer;
 				width: 50px;
@@ -207,11 +211,11 @@
 
 			.menu-wrap .hamburger {
 				position: absolute;
-				top: 0;
-				left: 0;
+				top: 1rem;
+				right: 0;
 				z-index: 1;
-				width: 2rem;
-				height: 2rem;
+				width: 1rem;
+				height: 1rem;
 				padding: 1rem;
 				background:rgba(0,9,9,.4) ;
 				display: flex;
@@ -330,6 +334,6 @@
 			}
 			   .logo{
 			     position:fixed;
-			       top:1rem ;left:8rem;
+			       top:1rem ;left:1rem;
 			            color:green;
          }
