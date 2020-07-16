@@ -385,7 +385,7 @@ font-weight: bold;
     top: 38%;
     transform: translate(-50%,-50%);
     width: 4.375rem;
-    z-index: 1;
+    z-index: 0;
 }
 .photo_gallery {
 	position: relative;
