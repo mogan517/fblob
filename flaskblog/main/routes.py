@@ -14,6 +14,11 @@ def newhome():
 @main.route('/favicon.ico')
 def favicon():
     return redirect(url_for('static', filename='favicon.ico'))
+
+@main.route('/root.txt')
+def roott():
+    return redirect(url_for('static', filename='root.txt'))
+
 # @main.route('/favicon.ico')
 # def favicon():
 #     print(75)
