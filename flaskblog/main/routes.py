@@ -1,5 +1,5 @@
 import os
-from flask import render_template, request, Blueprint,send_from_directory,url_for
+from flask import render_template, request, Blueprint, redirect, url_for
 from flaskblog.models import Post,Sitelist
 main = Blueprint('main', __name__)
 from flaskblog import mysql # Import from app here
@@ -11,8 +11,9 @@ def newhome():
     # for r in list:
     #     print(r)
     return render_template('newhome.html',list=list)
-# @main.add_url_rule('/favicon.ico',
-#       redirect_to=url_for('static', filename='favicon.ico'))
+@main.route('/favicon.ico')
+def favicon():
+    return redirect(url_for('static', filename='favicon.ico'))
 # @main.route('/favicon.ico')
 # def favicon():
 #     print(75)

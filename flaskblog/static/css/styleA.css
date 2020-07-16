@@ -71,7 +71,7 @@ text-align: left;
 				width: 2rem;
 				height: 2rem;
 				padding: 1rem;
-				background:rgba(0,9,9,.4) ;
+				background:white;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -83,7 +83,7 @@ text-align: left;
 				flex: none;
 				width: 1rem;
 				height: 2px;
-				background: #fff;
+				background: lightblue;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -176,9 +176,9 @@ text-align: left;
 
 			.menu-wrap .menu > div > div > ul > li {
 				list-style: none;
-			       color: white;
+			       color: black;
 			 padding: 3rem;
-			 background: rgba(22,22,22,.4);
+			 background: white
 			}
 
 			.menu-wrap .menu > div > div > ul > li > a {
@@ -553,6 +553,9 @@ ul.hot_topics,li {
     header,.gallery_pos_info,.panel_right,.photo_gallery,.why{
         display:none
     }
+	.gallery_headline {
+		visibility: hidden;
+	}
 	.menu-wrap {
 		display: block;
 	}
