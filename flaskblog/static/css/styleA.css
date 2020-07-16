@@ -252,6 +252,8 @@ nav {
 #logo{
 	grid-column:  2/3;
 	font-size: 24px;
+	margin-top: 1rem;
+    margin-left: 1rem;
 }
 .hamburger {
 	justify-self: end;
@@ -421,11 +423,11 @@ top: 6rem
 	color:white;
 	text-align: left;
 	position: absolute;
-  height: 98%;
+  height: 80%;
 	width: 30%;
 	right:0;
 	opacity: .7;
-	top:0
+	top:4rem
 }
 .gallery_pos_info::before {
   content: "";
@@ -442,7 +444,7 @@ top: 6rem
 .gallery_desc {
 line-height: 1rem;
     padding: 1rem .4rem 3rem;
-    background: black;
+    /* background: black; */
     font-size: 0.8rem;
     border-radius: 4px;
     letter-spacing: 3px;
@@ -548,7 +550,7 @@ ul.hot_topics,li {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    header,.gallery_pos_info,.panel_right{
+    header,.gallery_pos_info,.panel_right,.photo_gallery,.why{
         display:none
     }
 	.menu-wrap {
