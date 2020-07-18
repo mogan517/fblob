@@ -15,9 +15,13 @@ def newhome():
 def favicon():
     return redirect(url_for('static', filename='favicon.ico'))
 
-@main.route('/root.txt')
-def roott():
-    return redirect(url_for('static', filename='root.txt'))
+# @main.route('/root.txt')
+# def roott():
+#     # f = open(url_for('static', filename='root.txt'))
+#     with current_app.open_resource('static/english_words.txt') as f:
+#     return  f.read()
+    # return 
+    # return redirect(url_for('static', filename='root.txt'))
 
 # @main.route('/favicon.ico')
 # def favicon():
